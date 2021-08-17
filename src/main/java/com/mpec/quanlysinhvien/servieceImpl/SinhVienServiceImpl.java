@@ -1,7 +1,7 @@
 package com.mpec.quanlysinhvien.servieceImpl;
 
 import com.mpec.quanlysinhvien.entities.SinhVien;
-import com.mpec.quanlysinhvien.entities.SinhVienDTO;
+import com.mpec.quanlysinhvien.dto.SinhVienDTO;
 import com.mpec.quanlysinhvien.repository.SinhVienRepo;
 import com.mpec.quanlysinhvien.service.SinhVienService;
 import org.springframework.beans.factory.annotation.Autowired;

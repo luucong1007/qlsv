@@ -1,8 +1,7 @@
 package com.mpec.quanlysinhvien.service;
 
-import com.mpec.quanlysinhvien.entities.MonHoc;
 import com.mpec.quanlysinhvien.entities.SinhVien;
-import com.mpec.quanlysinhvien.entities.SinhVienDTO;
+import com.mpec.quanlysinhvien.dto.SinhVienDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

@@ -1,11 +1,8 @@
 package com.mpec.quanlysinhvien.controller;
 
-import com.mpec.quanlysinhvien.entities.MonHoc;
 import com.mpec.quanlysinhvien.entities.SinhVien;
-import com.mpec.quanlysinhvien.entities.SinhVienDTO;
-import com.mpec.quanlysinhvien.repository.SinhVienRepo;
+import com.mpec.quanlysinhvien.dto.SinhVienDTO;
 import com.mpec.quanlysinhvien.service.SinhVienService;
-import org.hibernate.annotations.GeneratorType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

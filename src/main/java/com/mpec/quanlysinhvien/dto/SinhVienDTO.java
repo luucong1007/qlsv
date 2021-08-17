@@ -1,4 +1,4 @@
-package com.mpec.quanlysinhvien.entities;
+package com.mpec.quanlysinhvien.dto;
 
 import lombok.Data;
 

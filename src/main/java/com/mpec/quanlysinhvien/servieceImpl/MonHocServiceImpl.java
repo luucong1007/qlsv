@@ -1,8 +1,6 @@
 package com.mpec.quanlysinhvien.servieceImpl;
 
 import com.mpec.quanlysinhvien.entities.MonHoc;
-import com.mpec.quanlysinhvien.entities.SinhVien;
-import com.mpec.quanlysinhvien.entities.SinhVienDTO;
 import com.mpec.quanlysinhvien.repository.MonHocRepo;
 import com.mpec.quanlysinhvien.service.MonHocService;
 import org.springframework.beans.factory.annotation.Autowired;
