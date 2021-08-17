@@ -1,5 +1,6 @@
 package com.mpec.quanlysinhvien.servieceImpl;
 
+import com.mpec.quanlysinhvien.dto.SachDTO;
 import com.mpec.quanlysinhvien.entities.MonHoc;
 import com.mpec.quanlysinhvien.entities.Sach;
 import com.mpec.quanlysinhvien.entities.SinhVien;
@@ -58,13 +59,17 @@ public class SachServiceImpl implements SachService {
     }
 
     @Override
-    public Optional<Sach> update(Sach sach) {
+    public Optional<Sach> update(SachDTO sach) {
         try{
             Optional<Sach> sachOptional = findById(sach.getId(), false);
             if(!sachOptional.isPresent()){
                 return Optional.empty();
             }
-            return Optional.ofNullable(sachRepo.save(sach));
+            Sach s = sachOptional.get();
+//            s.setTenSach(sach.getTenSach());
+//            s.setNgayMuon(sach.getNgayMuon());
+            return Optional.ofNullable(sachRepo.save(s));
+
         } catch (Exception ex) {
             return Optional.empty();
         }

@@ -1,5 +1,6 @@
 package com.mpec.quanlysinhvien.service;
 
+import com.mpec.quanlysinhvien.dto.TheSinhVienDTO;
 import com.mpec.quanlysinhvien.entities.MonHoc;
 import com.mpec.quanlysinhvien.entities.Sach;
 import com.mpec.quanlysinhvien.entities.SinhVien;
@@ -22,7 +23,7 @@ public interface TheSinhVienService {
 
     Optional<TheSinhVien> save(TheSinhVien theSinhVien);
 
-    Optional<TheSinhVien> update(TheSinhVien theSinhVien);
+    Optional<TheSinhVien> update(TheSinhVienDTO theSinhVien);
 
     Boolean delete(int id);
 

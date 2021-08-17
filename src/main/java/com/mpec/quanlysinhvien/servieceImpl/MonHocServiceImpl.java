@@ -1,5 +1,6 @@
 package com.mpec.quanlysinhvien.servieceImpl;
 
+import com.mpec.quanlysinhvien.dto.MonHocDTO;
 import com.mpec.quanlysinhvien.entities.MonHoc;
 import com.mpec.quanlysinhvien.repository.MonHocRepo;
 import com.mpec.quanlysinhvien.service.MonHocService;
@@ -57,7 +58,7 @@ public class MonHocServiceImpl implements MonHocService {
     }
 
     @Override
-    public Optional<MonHoc> update(MonHoc monHoc) {
+    public Optional<MonHoc> update(MonHocDTO monHoc) {
         try{
             Optional<MonHoc> monHocOptional = findById(monHoc.getId(), false);
             if(!monHocOptional.isPresent()){

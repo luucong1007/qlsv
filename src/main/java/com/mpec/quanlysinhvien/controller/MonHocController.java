@@ -1,5 +1,6 @@
 package com.mpec.quanlysinhvien.controller;
 
+import com.mpec.quanlysinhvien.dto.MonHocDTO;
 import com.mpec.quanlysinhvien.entities.MonHoc;
 import com.mpec.quanlysinhvien.service.MonHocService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,7 +72,7 @@ public class MonHocController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<?> update(@RequestBody MonHoc mh){
+    public ResponseEntity<?> update(@RequestBody MonHocDTO mh){
         Optional<MonHoc> monHoc = monHocService.update(mh);
         if(monHoc.isPresent()){
             return ResponseEntity.ok("success");

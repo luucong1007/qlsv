@@ -1,5 +1,6 @@
 package com.mpec.quanlysinhvien.servieceImpl;
 
+import com.mpec.quanlysinhvien.dto.TheSinhVienDTO;
 import com.mpec.quanlysinhvien.entities.TheSinhVien;
 import com.mpec.quanlysinhvien.repository.TheSinhVienRepo;
 import com.mpec.quanlysinhvien.service.TheSinhVienService;
@@ -56,13 +57,14 @@ public class TheSinhVienServiceImpl implements TheSinhVienService {
     }
 
     @Override
-    public Optional<TheSinhVien> update(TheSinhVien theSinhVien) {
+    public Optional<TheSinhVien> update(TheSinhVienDTO theSinhVien) {
         try{
             Optional<TheSinhVien> theSinhVienOptional = findById(theSinhVien.getId(), false);
             if(!theSinhVienOptional.isPresent()){
                 return Optional.empty();
             }
-            return Optional.ofNullable(theSinhVienRepo.save(theSinhVien));
+            TheSinhVien tsv = theSinhVienOptional.get();
+            return Optional.ofNullable(theSinhVienRepo.save(tsv));
         } catch (Exception ex) {
             return Optional.empty();
         }

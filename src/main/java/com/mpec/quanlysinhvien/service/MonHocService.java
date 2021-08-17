@@ -1,5 +1,6 @@
 package com.mpec.quanlysinhvien.service;
 
+import com.mpec.quanlysinhvien.dto.MonHocDTO;
 import com.mpec.quanlysinhvien.entities.MonHoc;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -19,7 +20,7 @@ public interface MonHocService {
 
     Optional<MonHoc> save(MonHoc monHoc);
 
-    Optional<MonHoc> update(MonHoc monHoc);
+    Optional<MonHoc> update(MonHocDTO monHoc);
 
     Boolean delete(int id);
 }

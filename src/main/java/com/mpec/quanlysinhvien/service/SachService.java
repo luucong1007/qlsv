@@ -1,5 +1,6 @@
 package com.mpec.quanlysinhvien.service;
 
+import com.mpec.quanlysinhvien.dto.SachDTO;
 import com.mpec.quanlysinhvien.entities.MonHoc;
 import com.mpec.quanlysinhvien.entities.Sach;
 import com.mpec.quanlysinhvien.entities.SinhVien;
@@ -22,7 +23,7 @@ public interface SachService {
 
     Optional<Sach> save(Sach monHoc);
 
-    Optional<Sach> update(Sach monHoc);
+    Optional<Sach> update(SachDTO monHoc);
 
     Boolean delete(int id);
 

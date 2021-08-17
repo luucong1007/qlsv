@@ -1,5 +1,6 @@
 package com.mpec.quanlysinhvien.controller;
 
+import com.mpec.quanlysinhvien.dto.SachDTO;
 import com.mpec.quanlysinhvien.entities.MonHoc;
 import com.mpec.quanlysinhvien.entities.Sach;
 import com.mpec.quanlysinhvien.entities.SinhVien;
@@ -73,15 +74,16 @@ public class SachController {
     @PutMapping("/update")
     public ResponseEntity<?> update(@RequestParam("sinh_vien_id") int sinhVienId,
                                     @RequestParam("xoa") Boolean xoa,
-                                    @RequestParam("ten_sach") String tenSach,
-                                    @RequestParam("ngay_muon")String ngayMuon,
-                                    @RequestParam("sach_id") int sachId){
-        return sachService.findById(sachId, xoa)
+//                                    @RequestParam("ten_sach") String tenSach,
+//                                    @RequestParam("ngay_muon")String ngayMuon,
+//                                    @RequestParam("sach_id") int sachId){
+                                    @RequestBody SachDTO s){
+        return sachService.findById(s.getId(), xoa)
                 .map(sach -> {
                     return  sinhVienService.findById(sinhVienId,xoa)
                                     .map(sinhVien -> {
-                                        sach.setNgayMuon(ngayMuon);
-                                        sach.setTenSach(tenSach);
+                                        sach.setNgayMuon(s.getNgayMuon());
+                                        sach.setTenSach(s.getTenSach());
                                         sach.setSinhVien(sinhVien);
                                         sachService.save(sach);
                                         return ResponseEntity.ok("success");
