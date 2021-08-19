@@ -19,11 +19,13 @@ public class SinhVienMonHoc {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "sinh_vien_id")
-    private int sinhVienId;
+    @ManyToOne
+    @JoinColumn(name = "sinh_vien_id")
+    private SinhVien sinhVien;
 
-    @Column(name = "mon_hoc_id")
-    private int monHocId;
+    @ManyToOne
+    @JoinColumn(name = "mon_hoc_id")
+    private MonHoc monHoc;
 
     @Column(name = "ngay_tao")
     private String ngayTao;
